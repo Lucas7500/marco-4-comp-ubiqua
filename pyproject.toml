@@ -1,0 +1,39 @@
+[project]
+name = "jacare-backend"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "httpx>=0.27,<1",
+  "paho-mqtt>=2,<3",
+  "python-dotenv>=1,<2",
+  "websockets>=13,<17",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8,<10",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 95
+
+[tool.pyright]
+extraPaths = ["src"]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff.lint]
+extend-select = ["ANN"]

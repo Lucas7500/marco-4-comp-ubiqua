@@ -1,0 +1,17 @@
+"""Shared firmware identifiers, states, and API/protocol limits."""
+
+SENSOR_CHANNEL_ID: int = 3499366
+ACTUATOR_CHANNEL_ID: int = 3540202
+
+ACTUATOR_OFF: int = 0
+ACTUATOR_ON: int = 1
+
+MQTT_TLS_PORT: int = 8883
+MQTT_KEEPALIVE_SECONDS: int = 60
+MQTT_SUBSCRIPTION_QOS: int = 0
+
+MIN_HISTORY_LIMIT: int = 1
+MAX_HISTORY_LIMIT: int = 8000
+DEFAULT_HISTORY_LIMIT: int = 100
+MIN_FIELD_NUMBER: int = 1
+MAX_FIELD_NUMBER: int = 3
